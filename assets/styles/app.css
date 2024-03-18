@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+
+}
+/* //////// NAV */
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 136, 189, 1);
+    color: white;
+}
+
+ul{
+    list-style: none;
+    width: fit-content;
+    text-align: center;
+}li{
+    width: fit-content;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 10px ;
+    transition: all 0.4s;
+    background-color: transparent;
+
+}
+li:hover{
+    border-radius: 5px;
+    border-bottom: 3px solid white;
+
+}
+
+li > a  {
+    color: white;
+
+}
+
+ i {
+    font-size: 23px;
+    color: white;
+}
+
+
+/* //////// INDEX */
+h2{
+    font-size: xx-large;
+    color: white;
+    padding:  5px 10px;
+    border-bottom: 2px solid rgb(0, 88, 123);
+    background-color: rgba(0, 136, 189, 1);
+    width: fit-content;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 10px;
+
+}
+
+h2 > img{
+    margin-left: 10px;
+    width: 35px;
+    height: auto;
+}
+#posts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.post {
+    width: calc(33.33% - 80px); /* Chaque post prend 33.33% de la largeur avec un espace de 40px entre les colonnes */
+    margin: 10px; /* Espacement entre les posts */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(251, 251, 251);
+    height: 100px;
+    margin-top: 45px;
+    /* box-shadow: 0px 5px 0px 0px #DEDEDE; */
+    transition: all 0.5s;
+
+}
+.post:hover{
+    box-shadow: 0px 5px 0px 0px #DEDEDE;
+    cursor: pointer;
+    transform: scale(1.05); 
+
+}
+
+.middle-post {
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .post {
+        width: calc(100% - 20px); /* Sur les petits écrans, afficher deux posts par ligne */
+        margin-top: 10px;
+    }
+}
+
+
+
+a{
+    font-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: rgb(45, 45, 45);
+}
+
+
+.post h3 {
+    color: rgba(0, 136, 189, 1);
+    font-size:x-large;
+}
+
+/* //////// DETAILS */
+.detail-post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenu {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(251, 251, 251);
+    min-height: 100px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    box-shadow: 0px 5px 0px 0px #DEDEDE;
+    font-weight: 400;
+
+    transition: all 0.4s ease-in-out;
+
+
+}
+.contenu:hover{
+    font-weight: 800;
+    transform: scale(1.05);
+
+}
+
+
+
+.publication{
+    margin: auto;
+    font-style: italic;
+}

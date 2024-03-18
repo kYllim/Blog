@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+
+{% endblock %}
+
+{% block content %}
+<h2>Posts <img src="{{ asset('resources/icons8-soleil.svg') }}" alt="soleil">
+
+</h2>
+<div id="posts">
+
+        {% for post in posts %}
+            <section class="post{% if loop.index % 3 == 2 %} middle-post{% endif %}">
+                <a href="{{ path('post_detail', {'id': post.getId}) }} ">
+                    <h3>{{ post.getTitre() }}</h3>
+                    <p>Lire ce poste<p>
+                </a>
+            </section>
+        {% endfor %}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ post.getTitre() }} - {{ post.getAuteur() }}{% endblock %}
+
+{% block content %}
+    <div class="detail-post">
+        <h2>{{ post.getTitre() }} <img src="{{ asset('resources/icons8-soleil.svg') }}" alt="soleil"></h2>
+        <p class="contenu ">{{ post.getContenu() }}</p>
+        <p class="publication">Publié par <strong class="auteur">{{ post.getAuteur() }}</strong>, {{ post.getDatePublication()|time_ago }}</p>
+    </div>
+{% endblock %}

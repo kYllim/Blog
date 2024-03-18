@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+            <link rel="stylesheet" href="{{ asset('node_modules/@fortawesome/fontawesome-free/css/all.min.css') }}"> <!-- Incluez le fichier CSS de Font Awesome -->
+        {% endblock %}
+
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="{{ path('blog_index') }}"><img src="{{ asset('resources/icons8-accueil.svg') }}" alt="Accueil">
+</a></li>
+            </ul>
+        </nav>
+        <svg viewBox="0 0 1270 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="rgba(0, 136, 189, 1)" d="M 0 200 C 193.79999999999998 200 452.20000000000005 110 646 110 L 646 110 L 646 0 L 0 0 Z" stroke-width="0"></path> <path fill="rgba(0, 136, 189, 1)" d="M 645 110 C 832.5 110 1082.5 200 1270 200 L 1270 200 L 1270 0 L 645 0 Z" stroke-width="0"></path> </svg>    
+
+
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+blog_index:
+    path: /
+    controller: App\Controller\BlogController::indexAction
+
+post_detail:
+    path: /post/{id}
+    controller: 'App\Controller\BlogController::detailAction'
+
+
+
